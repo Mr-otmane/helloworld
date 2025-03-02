@@ -15,12 +15,12 @@ const data = [
     id: "3",
     question: "Accordion as a musical instrument",
     answer:
-      "Accordion componrnts are user interface elements used for organizing and presenting",
+      "The accordion is a musical instrument with a keyboard and bellows, it produces sound by air passing over reds when the player expands or compresses the bellows, used in varios music generes",
   },
   {
     id: "4",
     question: "Can I create an accordion component with a different framework?",
-    answer: "Accordion componrnts are user interface elements used for organ",
+    answer: "Yes of course, it is very possible to create an accordion component with another framework",
   },
 ];
 export default data;

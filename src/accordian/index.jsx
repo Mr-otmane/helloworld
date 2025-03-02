@@ -18,13 +18,13 @@ export default function Accordian() {
 
     console.log(findIndexOfCurrentId);
 
-    if(findIndexOfCurrentId === -1) cpyMutiple.push(getCurrentId)
-        else cpyMutiple.splice(findIndexOfCurrentId , 1)
+    if (findIndexOfCurrentId === -1) cpyMutiple.push(getCurrentId);
+    else cpyMutiple.splice(findIndexOfCurrentId, 1);
 
-    setMultiple(cpyMutiple)
+    setMultiple(cpyMutiple);
   }
 
-  console.log(selected , multiple);
+  console.log(selected, multiple);
   return (
     <div className="wrapper">
       <button onClick={() => setEnableMultiSelection(!enableMultiSelection)}>
@@ -45,9 +45,17 @@ export default function Accordian() {
                 <h3>{dataItem.question}</h3>
                 <span>+</span>
               </div>
-              {selected === dataItem.id ? (
+              {enableMultiSelection
+                ? multiple.indexOf(dataItem.id) !== -1 && (
+                    <div className="content">{dataItem.answer}</div>
+                  )
+                : selected === dataItem.id && (
+                    <div className="content">{dataItem.answer}</div>
+                  )}
+              {/* {selected === dataItem.id ||
+              multiple.indexOf(dataItem.id) !== -1 ? (
                 <div className="content">{dataItem.answer}</div>
-              ) : null}
+              ) : null} */}
             </div>
           ))
         ) : (
